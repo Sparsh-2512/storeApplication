@@ -7,7 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StoreApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StoreApplication.class, args);
+        // Run Application
+        // SpringApplication.run(StoreApplication.class, args);
+
+        // Console Application
+        var orderService = new OrderService(new UpiPaymentService());
+        orderService.processOrder(20.0);
+
     }
 
 }
